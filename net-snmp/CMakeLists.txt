@@ -34,71 +34,69 @@ file(GLOB_RECURSE AGENT_SOURCES agent/*.c)
 list(REMOVE_ITEM SNMPLIB_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/broken_file.c
     ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/legacy_debug.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/snmplib/closedir.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/snmplib/readdir.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/snmplib/opendir.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/snmplib/gettimeofday.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/snmplib/snmpksm.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/snmplib/transports/snmpAAL5PVCDomain.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/snmplib/transports/snmpSTDDomain.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/snmplib/transports/snmpTLSBaseDomain.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/snmplib/transports/snmpSSHDomain.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swrun_procfs_psinfo.c
-
-    /media/amin/storage/workspace/net-snmp/net-snmp/agent/helpers/table_generic.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/snmplib/openssl/openssl_ncbc_enc.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/memory/memory_solaris.c
-
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/hr_swrun.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/helpers/table_generic.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_kstat.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_pcp.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_nlist.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_kerndata.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_pstat.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_sysinfo.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/memory/memory_dynix.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/memory/memory_irix.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/memory/memory_aix.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/memory/memory_solaris.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/sensors/kstat_sensors.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/fsys/fsys_mntctl.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swinst_rpm.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swrun_kvm_proc.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/sensors/lmsensors_v2.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_sysctl.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swrun_kinfo.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swrun_pstat.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/closedir.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/readdir.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/opendir.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/gettimeofday.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/snmpksm.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/transports/snmpAAL5PVCDomain.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/transports/snmpSTDDomain.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/transports/snmpTLSBaseDomain.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/transports/snmpSSHDomain.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swrun_procfs_psinfo.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/helpers/table_generic.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/snmplib/openssl/openssl_ncbc_enc.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/memory/memory_solaris.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/hr_swrun.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/helpers/table_generic.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_kstat.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_pcp.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_nlist.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_kerndata.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_pstat.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_sysinfo.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/memory/memory_dynix.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/memory/memory_irix.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/memory/memory_aix.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/memory/memory_solaris.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/sensors/kstat_sensors.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/fsys/fsys_mntctl.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swinst_rpm.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swrun_kvm_proc.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/sensors/lmsensors_v2.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_sysctl.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swrun_kinfo.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swrun_pstat.c
 )
 list(REMOVE_ITEM AGENT_SOURCES
-    /media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/memory/memory_win.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swrun_procfs_psinfo.c
-    /media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swrun_nlist.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/hr_swrun.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/helpers/table_generic.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_kstat.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_pcp.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/fsys/fsys_getfsstats.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_perfstat.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_mach.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_nlist.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_kerndata.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_pstat.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_sysinfo.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/memory/memory_dynix.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/memory/memory_irix.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/memory/memory_aix.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/memory/memory_solaris.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/sensors/kstat_sensors.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/fsys/fsys_mntctl.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swinst_rpm.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swrun_kvm_proc.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/sensors/lmsensors_v2.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/hardware/cpu/cpu_sysctl.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swrun_procinfo.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swrun_kinfo.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swrun_pstat.c
-/media/amin/storage/workspace/net-snmp/net-snmp/agent/mibgroup/host/data_access/swrun_cygwin.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/memory/memory_win.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swrun_procfs_psinfo.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swrun_nlist.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/hr_swrun.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/helpers/table_generic.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_kstat.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_pcp.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/fsys/fsys_getfsstats.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_perfstat.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_mach.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_nlist.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_kerndata.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_pstat.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_sysinfo.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/memory/memory_dynix.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/memory/memory_irix.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/memory/memory_aix.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/memory/memory_solaris.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/sensors/kstat_sensors.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/fsys/fsys_mntctl.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swinst_rpm.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swrun_kvm_proc.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/sensors/lmsensors_v2.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/hardware/cpu/cpu_sysctl.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swrun_procinfo.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swrun_kinfo.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swrun_pstat.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup/host/data_access/swrun_cygwin.c
     )
 # Create snmplib shared library
 add_library(snmplib SHARED ${SNMPLIB_SOURCES})

@@ -5,17 +5,16 @@ find_package(Threads REQUIRED)
 include_directories(${CMAKE_SOURCE_DIR}/src)
 file(GLOB SRC_COMMON ${CMAKE_SOURCE_DIR}/src/*.c)
 list(REMOVE_ITEM SRC_COMMON ${CMAKE_SOURCE_DIR}/src/main.c ${CMAKE_SOURCE_DIR}/src/main_test.c)
-add_definitions(-DFD_SET)
-add_definitions(-D_XOPEN_SOURCE=700)
-add_definitions(-DUNIT_TESTING=1)
-add_definitions(-D__STRICT_ANSI__)
+
 
 # Define UNIT_TEST_BUILD_PATH with proper escaping and trailing slash
 add_definitions(-DUNIT_TEST_BUILD_PATH="${CMAKE_BINARY_DIR}/")
 add_definitions(-DPROJECT_DIR="${CMAKE_SOURCE_DIR}/")
-add_definitions(-D_DEFAULT_SOURCE -D_BSD_SOURCE)
-add_definitions(-DNETSNMP_USE_KERBEROS_MIT)
-
+#add_definitions(-D_DEFAULT_SOURCE -D_BSD_SOURCE)
+#add_definitions(-DNETSNMP_USE_KERBEROS_MIT)
+add_definitions(-DHAVE_GETTIMEOFDAY=1)
+add_definitions(-DHAVE_SYS_TYPES_H=1)
+add_definitions(-DHAVE_STDDEF_H=1)
 file(GLOB SRC_TEST
     ${CMAKE_SOURCE_DIR}/test/*.c
 
@@ -47,25 +46,45 @@ list(REMOVE_ITEM SRC_SNMP
 
 
 )
-
 include_directories(
-     /usr/local/include/
-     /usr/include/
-     /opt/sqlite3-custom/include/
-     /usr/include/linux/
-     ${CMAKE_SOURCE_DIR}/lib/Unity/src/
-     ${CMAKE_SOURCE_DIR}/lib/Unity/extras/fixture/src
-     ${CMAKE_SOURCE_DIR}/lib/Unity/extras/memory/src/
-     ${CMAKE_SOURCE_DIR}/src
-     ${CMAKE_SOURCE_DIR}/net-snmp/build/include/
-     ${CMAKE_SOURCE_DIR}/net-snmp/include/
-     ${CMAKE_SOURCE_DIR}/net-snmp/agent/mibgroup/
-     ${CMAKE_SOURCE_DIR}/net-snmp/build/snmplib/
-     ${CMAKE_SOURCE_DIR}/net-snmp/build/agent/mibgroup/
-     ${CMAKE_SOURCE_DIR}/net-snmp/agent/
-     ${CMAKE_SOURCE_DIR}/net-snmp/include/net-snmp/agent/
+    /media/amin/storage/workspace/net-snmp/net-snmp/build/include/
+    /media/amin/storage/workspace/net-snmp/net-snmp/include/
+    /media/amin/storage/workspace/net-snmp/net-snmp/build/snmplib/
+    /media/amin/storage/workspace/net-snmp/net-snmp/include/net-snmp/
+    /media/amin/storage/workspace/net-snmp/net-snmp/build/agent/mibgroup/
+    /media/amin/storage/workspace/net-snmp/net-snmp/include/net-snmp/agent/
+    /media/amin/storage/workspace/net-snmp/net-snmp/include/net-snmp/
 
-    )
+    ${CMAKE_SOURCE_DIR}/lib/Unity/src/
+    ${CMAKE_SOURCE_DIR}/lib/Unity/extras/fixture/src
+    ${CMAKE_SOURCE_DIR}/lib/Unity/extras/memory/src/
+    ${CMAKE_SOURCE_DIR}/src
+
+    ${CMAKE_CURRENT_SOURCE_DIR}/snmplib
+#     ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/helpers
+    ${CMAKE_CURRENT_SOURCE_DIR}/agent/mibgroup
+    /usr/include/libnl3   # from Makefile
+)
+#include_directories(
+#     /usr/local/include/
+#     /usr/include/
+#     /opt/sqlite3-custom/include/
+#     /usr/include/linux/
+#     ${CMAKE_SOURCE_DIR}/lib/Unity/src/
+#     ${CMAKE_SOURCE_DIR}/lib/Unity/extras/fixture/src
+#     ${CMAKE_SOURCE_DIR}/lib/Unity/extras/memory/src/
+#     ${CMAKE_SOURCE_DIR}/src
+#     ${CMAKE_SOURCE_DIR}/net-snmp/build/include/
+#     ${CMAKE_SOURCE_DIR}/net-snmp/include/
+#     ${CMAKE_SOURCE_DIR}/net-snmp/agent/mibgroup/
+#     ${CMAKE_SOURCE_DIR}/net-snmp/build/snmplib/
+#     ${CMAKE_SOURCE_DIR}/net-snmp/build/agent/mibgroup/
+#     ${CMAKE_SOURCE_DIR}/net-snmp/agent/
+#     ${CMAKE_SOURCE_DIR}/net-snmp/include/net-snmp/agent/
+
+#    )
 link_directories(
     /opt/sqlite3-custom/lib/
     /usr/local/lib/
