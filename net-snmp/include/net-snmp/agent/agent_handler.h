@@ -14,7 +14,7 @@
 #ifdef __cplusplus
 extern          "C" {
 #endif
-
+#include "net-snmp/library/oid.h"
 /** @file agent_handler.h
  *
  *  @addtogroup handler

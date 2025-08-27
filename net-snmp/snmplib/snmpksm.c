@@ -713,8 +713,8 @@ ksm_rgenerate_out_msg(struct snmp_secmod_outgoing_params *parms)
 #elif defined (OLD_HEIMDAL)	/* NETSNMP_USE_KERBEROS_MIT */
 #else                           /* NETSNMP_USE_KERBEROS_MIT */
 
-        blocksize =
-            krb5_enctype_array[subkey->enctype]->system->block_length;
+//        blocksize =
+//            krb5_enctype_array[subkey->enctype]->system->block_length;
 
 #endif                          /* NETSNMP_USE_KERBEROS_MIT */
 

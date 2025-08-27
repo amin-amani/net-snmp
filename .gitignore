@@ -1,0 +1,5 @@
+.vscode/
+CMakeLists.txt.user
+net-snmp/build
+build
+

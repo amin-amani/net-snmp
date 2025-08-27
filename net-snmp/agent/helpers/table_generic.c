@@ -14,7 +14,7 @@
  *   
  * @{
  */
-
+#include <agent/agent_handler.h>
 /* =======================================================
  * 
  *  Table Maintenance:
@@ -23,7 +23,6 @@
  *      add/replace/remove row
  *
  * ======================================================= */
-
 /** @defgroup table_maintenance table_maintenance
  *
  * Routines for maintaining the contents of a table.

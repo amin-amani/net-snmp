@@ -2,14 +2,16 @@
 #include "unity_fixture.h"
 
 #include <stdio.h>
-#include "../agent/snmp_agent.c"
-#include  "../agent/mibgroup/disman/traceroute/traceRouteCtlTable.h"
+#include <net-snmp/net-snmp-config.h>
+#include <net-snmp/net-snmp-includes.h>
+
+
 TEST_GROUP(GENERAL_GROUP);
 
 TEST_SETUP(GENERAL_GROUP)
 {
-    netsnmp_agent_session *asp;
-    netsnmp_add_queued(asp);
+//netsnmp_agent_session *asp;
+// netsnmp_add_queued(asp);
 
 }
 
